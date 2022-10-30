@@ -14,5 +14,15 @@ double student::calc-mean()
 }
 double student::get-grade()
 {
-    
+    if(calc_mean()>=70)
+        return 'A';
+    else if(calc_mean()>=60)
+        return 'B';
+    else if(calc_mean()>=50)
+        return 'C';
+    else if(calc_mean()>=40)
+        return 'D';
+    else(calc_mean()>=0)
+        return 'F';
+
 }
