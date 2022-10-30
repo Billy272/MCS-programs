@@ -12,11 +12,11 @@ struct node
 typedefstruct node node;
 node*head=NULL;
 void dislay();
-voidinsertend();
-voidinsertbeg();
-voiddelend();
-voidinsertmid();
-voiddelmid();
+void insertend();
+void insertbeg();
+void delend();
+void insertmid();
+void delmid();
 void modify();
 int main()
 {
@@ -63,7 +63,7 @@ int main()
     while(a!=8);
     getch();
 }
-voidinsertend()
+void insertend()
 {
     node*p,*q;
     int item;
@@ -96,7 +96,7 @@ voidinsertend()
         }
         cout<<("%d->\n",temp->data);
     }
-    voiddelend()
+    void delend()
     {
         node *q,*p,*k;
         q=start;
@@ -121,7 +121,7 @@ voidinsertend()
             free(p);
         }
     }
-    voidinsertbeg()
+    void insertbeg()
     {
         int item;
         node *p,*q;
@@ -133,7 +133,7 @@ voidinsertend()
         q->next=p;
         start=q;
     }
-    voiddelbeg()
+    void delbeg()
     {
         if(start=NULL)
         {
@@ -144,11 +144,11 @@ voidinsertend()
         start=p->next;
         free(p);
     }
-    voidinsertmid()
+    void insertmid()
     {
         int item1,item2;
         node *p,*q,*k;
-        cout<<("Enter the previous value then inser a new element: \n");
+        cout<<("Enter the previous value then insert a new element: \n");
         cin>>item1;
         cout<<("Enter the value of new node: \n");
         cin>>item2;
@@ -164,7 +164,7 @@ voidinsertend()
         p->next=q;
         q->next=k;
     }
-    voiddelmid()
+    void delmid()
     {
         int item;
         node *p,*q,*k;
@@ -202,7 +202,7 @@ voidinsertend()
     using namespace std;
     class stack
     {
-        intstk[5];
+        int stk[5];
         int top;
         public;
         stack()
@@ -305,7 +305,7 @@ voidinsertend()
                 cout<<"queue under flow";
                 return;
             }
-            cout<<"dleted"<<queue1[++front];
+            cout<<"deleted"<<queue1[++front];
         }
         void display()
         {
