@@ -36,7 +36,7 @@ void customer::deposit()
 void customer::withdraw()
 {
     double amount;
-    cout<<"Amount to withdraw: ";
+    cout<<"Amount to withdraw:";
     cin>>amount;
     balance-=amount;
     cout<<"New balance: "<<balance;
