@@ -121,7 +121,7 @@ void BST::find(int item, node **par,node **loc)
         *par=NULL;
         return;
     }
-    if(item < root->info)
+    if(item==root->info)
         ptr=root->left;
     else
         ptr=root->right;
