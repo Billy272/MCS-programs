@@ -10,7 +10,7 @@ class customer;
     public:
     void read_data();
     void deposit();
-    void witdraw();
+    void withdraw();
     double checkbalance();
     void display();
 }
@@ -36,7 +36,7 @@ void customer::deposit()
 void customer::withdraw()
 {
     double amount;
-    cout<<"Amount to widthraw: ";
+    cout<<"Amount to withdraw: ";
     cin>>amount;
     balance-=amount;
     cout<<"New balance: "<<balance;
@@ -59,7 +59,7 @@ int main()
     c.read_data();
     c.display();
     cout<<"Press 1 to Deposit"<<endl;
-    cout<<"Press 2 to Widthraw"<<endl;
+    cout<<"Press 2 to Withdraw"<<endl;
     cout<<"Press 3 to Check balance"<<endl;
     cin>>x;
 
