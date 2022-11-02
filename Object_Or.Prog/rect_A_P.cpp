@@ -4,9 +4,9 @@ using namespace std;
 
 class Rectangle
 {
-    public:
     int width, height,area,perimeter;
     Rectangle();
+    public:
     void get_rectangle();
     int get_area();
     int get_perimeter();
