@@ -63,6 +63,7 @@ int main()
     while(a!=8);
     getch();
 }
+
 void insertend()
 {
     node*p,*q;
@@ -133,6 +134,7 @@ void insertend()
         q->next=p;
         start=q;
     }
+    
     void delbeg()
     {
         if(start=NULL)
@@ -144,6 +146,7 @@ void insertend()
         start=p->next;
         free(p);
     }
+    
     void insertmid()
     {
         int item1,item2;
@@ -164,6 +167,7 @@ void insertend()
         p->next=q;
         q->next=k;
     }
+    
     void delmid()
     {
         int item;
@@ -180,6 +184,7 @@ void insertend()
         p->next=q;
         free(k);
     }
+    
     void modify()
     {
         int item1,item2;
@@ -205,12 +210,12 @@ void insertend()
         int stk[5];
         int top;
         public;
-        stack()
-        {
+         stack()
+         {
             top=-1;
-        }
-        void push(int x)
-        {
+         }
+         void push(int x)
+         {
             if(top>4)
             {
                 cout<<"Stack over flow";
@@ -218,18 +223,18 @@ void insertend()
             }
             stk[++top]=x;
             cout<<"inserted"<<x;
-        }
-        void pop()
-        {
+         }
+         void pop()
+         {
             if(top<0)
             {
                 cout<<"stack under flow";
                 return;
             }
             cout<<"deleted"<<stk[top-];
-        }
-        void display()
-        {
+         }
+         void display()
+         {
             if(top<0)
             {
                 cout<<"stack empty";
@@ -237,7 +242,7 @@ void insertend()
             }
             for(int i=top;i>=0;i--)
             cout<<stk[i]<<" ";
-        }
+         }
     };
 
     int main()
