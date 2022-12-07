@@ -58,9 +58,9 @@ int main()
     int x;
     c.read_data();
     c.display();
-    cout<<"Press 1 to Deposit"<<endl;
-    cout<<"Press 2 to Widthraw"<<endl;
-    cout<<"Press 3 to Check balance"<<endl;
+    cout<<"Press 1 to Deposit."<<endl;
+    cout<<"Press 2 to Widthraw."<<endl;
+    cout<<"Press 3 to Check balance."<<endl;
     cin>>x;
 
     if(x==1)
