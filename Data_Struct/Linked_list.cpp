@@ -285,7 +285,11 @@ void insertend()
         queue()
         {
             rear=-1;
+<<<<<<< HEAD
             front=-1;
+=======
+            front=-1
+>>>>>>> 6b27d9b2ce91405c347deca83122d6e757dc4472
         }
         void insert(int x)
         {
@@ -298,7 +302,11 @@ void insertend()
             queue1[++rear]=x;
             cout<<"inserted"<<x;
         }
+<<<<<<< HEAD
         void delet()
+=======
+        voiddelet()
+>>>>>>> 6b27d9b2ce91405c347deca83122d6e757dc4472
         {
             if(front==rear)
             {
@@ -321,8 +329,13 @@ void insertend()
 
     main()
     {
+<<<<<<< HEAD
         int ch;
         queue qu;
+=======
+        intch;
+        queuequ;
+>>>>>>> 6b27d9b2ce91405c347deca83122d6e757dc4472
         while(1)
         {
             cout<<"\n1.insert 2.delete 3.display 4.exit\nEnter your choice: ";
