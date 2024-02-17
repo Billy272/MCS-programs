@@ -4,14 +4,15 @@
 #include <fstream>
 #include <stdlib.h>
 #include <math.h>
+#include <conio>
 #include <iomanip>
 
-int main(void){
+void main(void){
     int i, j, run = 10;
     double x, x1, x2, st, awt, pcu, wt = 0, iat = 0, it;
     double mean = 10, sd = 1.5, mue = 9.5, sigma = 1.0;
     double sb = 0, se = 0, cit = 0, cat = 0, cwt = 0;
-    std::ofstream outfile("output.txt", std::ios::out);
+        ofstream outfile("output.txt", ios::out);
     outfile << "\ni r' IAT CAT SB r' ST SE WT IT \n";
     for (j = 1; j<= run; j++){
         //Generating inter arrival time
@@ -22,10 +23,9 @@ int main(void){
         }
         x1 = mean + sd * (sum - 6);
         iat = x1;
-        //std::cout<< "iat ="<< iat;
-        cat = cat + iat;
-        // cout<< "cat ="<< cat;
-
+        //cout<<"iat = "<<iat;
+        cat += iat;
+        //cout<<"cat = "<<cat;
+        
     }
-    return 0;
 }
