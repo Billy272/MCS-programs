@@ -5,9 +5,10 @@
 #include <stdlib.h>
 #include <math.h>
 #include <iomanip>
+
 using namespace std;
 
-void main(void){
+int main(){
     int i, j, run = 10;
     double x, x1, x2, st, awt, pcu, wt = 0, iat = 0, it;
     double mean = 10, sd = 1.5, mue = 9.5, sigma = 1.0;
@@ -18,7 +19,7 @@ void main(void){
         //Generating inter arrival time
         double sum = 0;
         for(i = 1; i<= 12; i++) {
-            x = rand()/32768.0;
+            x = rand()/(double)RAND_MAX;
             sum += x;
         }
         x1 = mean + sd * (sum - 6);
@@ -34,13 +35,13 @@ void main(void){
         }
         else{
             sb =cat;
-            it = sb - se;
+            double it = sb - se;
             cit = cit + it;
         }
         //Generating service time
         sum = 0;
         for(i=1;i<=12;i++){
-            x = rand()/32768.0;
+            x = rand()/(double)RAND_MAX;
             sum += x;
             x2 = mue + sigma * (sum - 6);
             st = x2;
@@ -56,4 +57,6 @@ void main(void){
     outfile<<"Average waiting time\n";
     outfile<<awt;
     outfile<<"Percentage capacity utilization\n"<<pcu;
+
+    return 0;
 }
