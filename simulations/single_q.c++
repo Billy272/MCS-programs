@@ -4,8 +4,8 @@
 #include <fstream>
 #include <stdlib.h>
 #include <math.h>
-#include <conio>
 #include <iomanip>
+using namespace std;
 
 void main(void){
     int i, j, run = 10;
@@ -46,6 +46,14 @@ void main(void){
             st = x2;
             se = sb + st;
         }
-        outfile<<j<<'\t'<<setprecision(4)<<x1<<'\t'<<setprecision(4)<<iat<<'\t'<<setprecision
+        outfile<<j<<'\t'<<setprecision(4)<<x1<<'\t'<<setprecision(4)<<iat<<'\t'<<setprecision(4)
+        <<cat<<'\t'<<setprecision(4)<<sb<<'\t'<<setprecision(4)<<x2<<'\t'<<setprecision(4)<<st<<
+        '\t'<<setprecision(4)<<se<<'\t'<<setprecision(4)<<se<<'\t'<<setprecision(4)<<wt<<'\t'<<
+        setprecision(4)<<it<<'\n';
     }
+    awt = cwt/run;
+    pcu = (cat - cit)*100/cat;
+    outfile<<"Average waiting time\n";
+    outfile<<awt;
+    outfile<<"Percentage capacity utilization\n"<<pcu;
 }
