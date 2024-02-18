@@ -26,6 +26,26 @@ void main(void){
         //cout<<"iat = "<<iat;
         cat += iat;
         //cout<<"cat = "<<cat;
-        
+        if(cat <= se){
+            sb = se;
+            wt = se - cat;
+            cwt = cwt + wt;
+            // cout<<"cwt = "<<cwt;
+        }
+        else{
+            sb =cat;
+            it = sb - se;
+            cit = cit + it;
+        }
+        //Generating service time
+        sum = 0;
+        for(i=1;i<=12;i++){
+            x = rand()/32768.0;
+            sum += x;
+            x2 = mue + sigma * (sum - 6);
+            st = x2;
+            se = sb + st;
+        }
+        outfile<<j<<'\t'<<setprecision(4)<<x1<<'\t'<<setprecision(4)<<iat<<'\t'<<setprecision
     }
 }
