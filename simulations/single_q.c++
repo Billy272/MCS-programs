@@ -64,7 +64,7 @@ int main(){
     pcu = (cat - cit)*100/cat;
     outfile<<"Average waiting time\n";
     outfile<<awt;
-    outfile<<"Percentage capacity utilization\n"<<pcu;
+    outfile<<"\nPercentage capacity utilization\n"<<pcu;
 
     return 0;
 }
