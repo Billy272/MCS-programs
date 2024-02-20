@@ -1,3 +1,10 @@
+// SCT-254-023/2021
+// SCT-254-035/2021
+// SCT-254-037/2021
+// SCT-254-075/2018
+// SCT-254-004/2020
+
+
 //Single Queue Simulations
 
 #include <iostream>
@@ -13,8 +20,9 @@ int main(){
     double x, x1, x2, st, awt, pcu, wt = 0, iat = 0, it;
     double mean = 10, sd = 1.5, mue = 9.5, sigma = 1.0;
     double sb = 0, se = 0, cit = 0, cat = 0, cwt = 0;
+    // sb = begin time, se = end time, cit = idle time, cat = arrival_time, cwt= waiting_time
         ofstream outfile("output.txt", ios::out);
-    outfile << "\ni r' IAT CAT SB r' ST SE WT IT \n";
+    outfile << "\ni r' Int-ArrT Arr_Time Sml_Begin r' Start_Time End_time Waiting_Time Idle_Time \n";
     for (j = 1; j<= run; j++){
         //Generating inter arrival time
         double sum = 0;
